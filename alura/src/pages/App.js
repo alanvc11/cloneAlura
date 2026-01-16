@@ -4,13 +4,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Cadeado from '@mui/icons-material/LockOutlined';
 import Calendario from '@mui/icons-material/CalendarToday';
+import Encerrado from '@mui/icons-material/EventAvailable';
 import './App.css';
 
 function App() {
   return (
     <>
-      {/* NAVBAR */}
-      <Navbar collapseOnSelect expand="lg" variant='dark' className="navbar-alura">
+     
+      <Navbar collapseOnSelect expand="lg" variant="dark" className="navbar-alura">
         <Container className="navbar-alura-container">
           <Navbar.Brand href="#home" className="navbar-alura-brand">
             <img
@@ -20,15 +21,10 @@ function App() {
             />
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            aria-controls="responsive-navbar-nav"
-            className="navbar-alura-toggle me-auto"
-          />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" className="navbar-alura-toggle me-auto" />
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="navbar-alura-left">
-              <Nav.Link className="navbar-alura-link" />
-            </Nav>
+            <Nav className="navbar-alura-left" />
 
             <Nav className="navbar-alura-right">
               <Nav.Link className="navbar-alura-link nav-icon">
@@ -59,14 +55,14 @@ function App() {
         </Container>
       </Navbar>
 
-      {/* HERO */}
+     
       <section className="section">
         <div className="section-conteudo">
           <h2>IMERSÕES</h2>
         </div>
       </section>
 
-      {/* MAIN */}
+     
       <main className="main">
         <section className="container-main">
           <p className="descricao-main">
@@ -76,34 +72,30 @@ function App() {
             certificado.
           </p>
 
+          
           <h2 className="titulo">Imersões ativas</h2>
 
           <div className="card">
-            {/* Badge superior */}
             <div className="badge-aulas">
-              <span className="icon-play">▶</span> AULAS LIBERADAS
+              <span>▶</span> AULAS LIBERADAS
             </div>
 
-            {/* Título com destaque */}
             <h3 className="imersao-titulo">
               imersão <span className="highlight">dados_python</span>
             </h3>
 
-            {/* Descrição e Data */}
             <p className="descricao">
-              Começar do zero é o primeiro <br/>
+              Começar do zero é o primeiro <br />
               passo para ir além. Aprenda análise
               de dados com Python em quatro...
             </p>
 
             <div className="data-info">
-              <span className="icon-calendar"><Calendario /></span> 01/01 - 30/01
+              <Calendario /> 01/01 - 30/01
             </div>
 
-            {/* Botão com corte lateral */}
             <button className="btn-saber-mais">SABER MAIS</button>
 
-            {/* Imagem da Equipe (Posicionada absolutamente) */}
             <div className="container-equipe">
               <img
                 src="/equipe-alura.webp"
@@ -112,6 +104,90 @@ function App() {
               />
             </div>
           </div>
+
+          
+          <hr style={{ margin: '60px 0' }} />
+
+          
+          <h2 className="titulo">Imersões que já acabaram</h2>
+
+          
+          <div className="cards-wrapper">
+            
+
+            <div className="card">
+              <div className="badge-aulas">
+                <span><Encerrado /></span> ENCERRADA
+              </div>
+
+              <h3 className="imersao-titulo">
+                imersão <span className="highlight">dev</span>
+              </h3>
+
+              <p className="descricao">
+                Sair da zona de conforto é o primeiro
+                passo para crescer. Aprenda a criar um
+                site dinâmico...
+              </p>
+
+              <div className="data-info">
+                <Calendario /> 10/02 - 28/02
+              </div>
+
+              <button className="btn-saber-mais-dev">SAIBA MAIS</button>
+
+              <div className="container-equipe">
+              <img
+                src="/imersaodev.webp"
+                alt="Equipe Alura"
+                className="img-equipe"
+              />
+            </div>
+            </div>
+
+
+            <div className="card">
+              <div className="badge-aulas">
+                <span><Encerrado /></span> ENCERRADA
+              </div>
+
+              <h3 className="imersao-titulo">
+                imersão <span className="highlight">IA_</span>
+              </h3>
+
+              <p className="descricao">
+                Sair da zona de conforto é o <br />
+                primeiro passo para crescer. <br />
+                Aprenda a usar a IA na prática, em...
+              </p>
+
+              <div className="data-info">
+                <Calendario /> 05/03 - 25/03
+              </div>
+
+              <button className="btn-saber-mais">SAIBA MAIS</button>
+
+              <div className="container-equipe">
+              <img
+                src="/imersaoia.webp"
+                alt="Equipe Alura"
+                className="img-equipe"
+              />
+            </div>
+
+            </div>
+
+            <p className="descricao-main">
+            O acervo de Imersões passadas está <strong> disponível apenas para alunos e alunas </strong> que possuem matrícula
+            ativa na Alura. Matricule-se e tenha acesso a todas as Imersões que já aconteceram por aqui, além de
+            todos os cursos disponíveis na plataforma!
+          </p>
+
+          
+          </div> 
+
+          <button className="btn-planos">VER PLANOS ALURA</button>
+
         </section>
       </main>
     </>
