@@ -130,10 +130,6 @@ function App() {
                 site dinâmico...
               </p>
 
-              <div className="data-info">
-                <Calendario /> 10/02 - 28/02
-              </div>
-
               <button className="btn-saber-mais-dev">SAIBA MAIS</button>
 
               <div className="container-equipe">
@@ -160,10 +156,6 @@ function App() {
                 primeiro passo para crescer. <br />
                 Aprenda a usar a IA na prática, em...
               </p>
-
-              <div className="data-info">
-                <Calendario /> 05/03 - 25/03
-              </div>
 
               <button className="btn-saber-mais">SAIBA MAIS</button>
 
